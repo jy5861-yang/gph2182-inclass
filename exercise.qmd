@@ -1,0 +1,134 @@
+---
+title: "Weekly Exercise 1: Welcome & R Fundamentals"
+author: "Jiezi Yang"
+format: html
+---
+
+<!--
+HOW THIS WORKS
+1. Answer each question by assigning your result to the object name given
+   in the question (q1, q2, ...). Do not change the object names.
+2. Render this document (the Render button in RStudio) to check that
+   everything runs without error.
+3. Commit and push your work to GitHub. Within 2 minutes, the Actions tab
+   shows which questions pass. Revise and push freely before the deadline.
+Reading: R02Pro Chapter 1 (https://r02pro.github.io/)
+AI policy: AI tools allowed with the verify-then-use workflow. You must be
+able to explain every line you submit.
+-->
+
+## Setup
+
+Run this chunk first to load packages used in the questions.
+
+```{r setup}
+library(r02pro)
+```
+
+## Q1. R as a Calculator & Order of Operations (R02Pro 1.2)
+
+In clinical medicine, Body Surface Area (BSA in $\text{m}^2$) is calculated using the Mosteller formula:
+
+$$\text{BSA} = \sqrt{\frac{\text{height (cm)} \times \text{weight (kg)}}{3600}}$$
+
+Calculate the BSA for an adult patient with a height of $178\text{ cm}$ and a weight of $82\text{ kg}$.
+Assign the resulting numeric value to `q1`.
+
+```{r q1}
+q1 <- sqrt(178*82/3600) # replace NULL with your answer
+```
+
+## Q2. Object Assignment & Dynamic Variables (R02Pro 1.2)
+
+A public health study plans to enroll participants with the following budget parameters:
+- `n_participants <- 180`
+- `cost_per_participant <- 375.50`
+- `fixed_overhead <- 22000`
+
+Assign these three variables, then calculate the total study budget:
+$$\text{total budget} = \text{fixed overhead} + (\text{participants} \times \text{cost per participant})$$
+Assign the total budget value to `q2`.
+
+```{r q2}
+q2 <- NULL # replace NULL with your answer
+```
+
+## Q3. Exponential Decay and Half-Life (R02Pro 1.2)
+
+The plasma concentration $C(t)$ of an antibiotic follows first-order elimination:
+
+$$C(t) = C_0 \times e^{-k \times t}$$
+
+Given:
+- Initial concentration $C_0 = 120\text{ mg/L}$
+- Elimination rate constant $k = 0.18\text{ hr}^{-1}$
+- Elapsed time $t = 8\text{ hours}$
+
+Calculate the drug concentration at $t = 8$ using R's `exp()` function, and assign the result to `q3`.
+
+```{r q3}
+q3 <- NULL # replace NULL with your answer
+```
+
+## Q4. Function Arguments & Rounding (R02Pro 1.3)
+
+Using your calculated value in `q3`, round the concentration to **2 decimal places**
+using the `round()` function with the `digits` argument. Assign the rounded value to `q4`.
+
+```{r q4}
+q4 <- NULL # replace NULL with your answer
+```
+
+## Q5. Logarithmic Transformations (R02Pro 1.2)
+
+In epidemiology and bioinformatics, data spanning multiple orders of magnitude are frequently transformed.
+- The natural logarithm (base $e$) is computed with `log()`.
+- The common logarithm (base $10$) is computed with `log10()`.
+
+Given a viral load count of $450,000\text{ copies/mL}$:
+Calculate the base-10 logarithm ($\log_{10}(450000)$) and assign the result to `q5`.
+
+```{r q5}
+q5 <- NULL # replace NULL with your answer
+```
+
+## Q6. Scientific Notation in R (R02Pro 1.2)
+
+In large population health studies, numbers are often written in scientific notation.
+For example, $1.5 \times 10^6$ is written in R as `1.5e6`.
+
+A national health survey covers a population of $3.45 \times 10^7$ people.
+If the disease incidence rate is $1.25 \times 10^{-4}$ per person-year,
+calculate the expected number of incident cases per year:
+$$\text{expected cases} = (3.45 \times 10^7) \times (1.25 \times 10^{-4})$$
+Calculate this value directly in R using scientific notation (`e` syntax), and assign the result to `q6`.
+
+```{r q6}
+q6 <- NULL # replace NULL with your answer
+```
+
+## Q7. Multi-Step Unit Conversion & BMI (R02Pro 1.2)
+
+A clinic records patient anthropometrics in imperial units:
+- Weight: $165\text{ lbs}$ (where $1\text{ lb} = 0.45359237\text{ kg}$)
+- Height: $68\text{ inches}$ (where $1\text{ inch} = 0.0254\text{ meters}$)
+
+Calculate the patient's Body Mass Index ($\text{BMI} = \frac{\text{weight in kg}}{(\text{height in meters})^2}$),
+and assign the resulting BMI value to `q7`.
+
+```{r q7}
+q7 <- NULL # replace NULL with your answer
+```
+
+## Q8. Package Functions & Absolute Differences (R02Pro 1.3, 1.4)
+
+Make sure the `r02pro` package is loaded (`library(r02pro)`).
+In the Ames housing dataset (`ahp` from `r02pro`), the first recorded sale price is $\$525,000$ and
+the second recorded sale price is $\$480,000$.
+
+Use the `abs()` function to compute the absolute difference between these two sale prices,
+and assign the result to `q8`.
+
+```{r q8}
+q8 <- NULL # replace NULL with your answer
+```
